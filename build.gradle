@@ -1,0 +1,43 @@
+buildscript {
+    dependencies {
+        classpath 'com.diffplug.spotless:spotless-plugin-gradle:3.14.0'
+    }
+}
+
+plugins {
+    id 'java'
+    id "com.github.johnrengelman.shadow" version "5.0.0"
+    id "com.github.spotbugs" version "2.0.1"
+}
+apply plugin: 'com.diffplug.gradle.spotless'
+
+group 'com.alexgaas.parser'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven { url "https://jcenter.bintray.com" }
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+shadowJar {
+    mergeServiceFiles()
+}
+
+spotless {
+    java {
+        target 'src/main/java/**/*.java', 'src/main/test/**/*.java'
+        removeUnusedImports()
+        indentWithSpaces()
+        trimTrailingWhitespace()
+    }
+}
