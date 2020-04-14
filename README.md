@@ -1,4 +1,6 @@
-Blueprints of simple custom parser
+# Parser
+
+Blueprints of simple custom parser. I made as simple as possible and unit tests for Integer, Boolean and String parsing.
 
 
 ### License
