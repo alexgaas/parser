@@ -5,4 +5,4 @@
 
 ### License
 
-Licensed under the [MIT License](https://github.com/alexgaas/graph/blob/master/README.md).
+Licensed under the [MIT License](https://github.com/alexgaas/parser/blob/master/README.md).
