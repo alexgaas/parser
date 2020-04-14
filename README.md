@@ -6,7 +6,7 @@
 
 ## Build
 
-By [gradle](https://gradle.org/) - look to `gralde.build` file.
+By [gradle](https://gradle.org/) - look to **`build.gradle`** file.
 
 ### License
 
